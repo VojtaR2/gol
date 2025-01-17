@@ -1,0 +1,83 @@
+body {
+  padding: 20px;
+  background-color: #2b2b2b; 
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#gridContainer {
+  padding-bottom: 10px;
+  display: inline-block;
+  border: 2px solid #555; 
+  background-color: #333;                          
+  border-radius: 10px; 
+  margin-top: 20px;
+}
+
+table {
+  background-color: #444;
+  border-spacing: 0;
+}
+
+td {
+  border: 1px solid #555; 
+  width: 20px;
+  height: 20px;
+  transition: background-color 0.2s ease; 
+}
+
+td.dead {
+  background-color: #2b2b2b; 
+}
+
+td.live {
+  background-color: #4caf50; 
+  box-shadow: 0 0 5px #4caf50; 
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049; 
+}
+
+button:active {
+  background-color: #3e8e41; 
+}
+
+input[type="checkbox"] {
+  margin-left: 10px;
+  transform: scale(1.2); 
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  td {
+    width: 12px;  /* Smaller grid cells for very small screens */
+    height: 12px;
+  }
+
+  button {
+    font-size: 12px; /* Even smaller font size for very small screens */
+    padding: 6px 12px; /* Adjust button padding further */
+  }
+
+  .controls {
+    margin-top: 5px;
+  }
+}

@@ -5,9 +5,8 @@ let playing = false;
 let timer;
 let reproductionTime = 500;
 let generation = 0; 
-let allowDeath = true; // Výchozí povolení umírání
-let cellSize = 20; // Výchozí velikost buňky
-
+let allowDeath = true; 
+let cellSize = 20; 
 let grid = new Array(rows);
 let nextGrid = new Array(rows);
 
@@ -24,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
 function setupToggleDeath() {
     const toggleDeathCheckbox = document.getElementById("toggleDeath");
 
-    // Nastav výchozí hodnotu podle checkboxu
+    
     allowDeath = toggleDeathCheckbox.checked;
 
-    // Přidej listener pro změnu checkboxu
+    
     toggleDeathCheckbox.addEventListener("change", () => {
         allowDeath = toggleDeathCheckbox.checked;
         console.log(`allowDeath změněno na: ${allowDeath}`);
@@ -37,10 +36,8 @@ function setupToggleDeath() {
 function setupCellSizeChange() {
     const cellSizeSelect = document.getElementById("cellSize");
 
-    // Nastav výchozí velikost
     cellSize = parseInt(cellSizeSelect.value);
 
-    // Přidej listener pro změnu velikosti buněk
     cellSizeSelect.addEventListener("change", () => {
         cellSize = parseInt(cellSizeSelect.value);
         updateCellSizes();

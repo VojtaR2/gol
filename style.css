@@ -65,6 +65,24 @@ input[type="checkbox"] {
   transform: scale(1.2); 
   cursor: pointer;
 }
+body.light {
+  background-color: #ffffff; 
+  color: #000000; 
+}
+
+body.dark {
+  background-color: #2b2b2b; 
+  color: #ffffff; 
+}
+
+#gridContainer.light {
+  background-color: #f0f0f0; 
+}
+
+#gridContainer.dark {
+  background-color: #333333; 
+}
+
 
 @media (max-width: 480px) {
   td {

@@ -17,16 +17,32 @@ document.addEventListener('DOMContentLoaded', () => {
     setupControlButtons();
     setupToggleDeath();
     setupCellSizeChange();
+    setupSkinToggle(); // Call the setupSkinToggle function
     updateStats();
 });
+
+function setupSkinToggle() {
+    const skinToggle = document.getElementById("skinToggle");
+
+    // Set initial skin based on the selected value
+    const selectedSkin = skinToggle.value;
+    document.body.className = selectedSkin;
+    document.getElementById("gridContainer").className = selectedSkin;
+
+    // Change skin when a new option is selected
+    skinToggle.addEventListener("change", () => {
+        const selectedSkin = skinToggle.value;
+        console.log(`Switching skin to: ${selectedSkin}`); 
+        document.body.className = selectedSkin;
+        document.getElementById("gridContainer").className = selectedSkin;
+    });
+}
 
 function setupToggleDeath() {
     const toggleDeathCheckbox = document.getElementById("toggleDeath");
 
-    
     allowDeath = toggleDeathCheckbox.checked;
 
-    
     toggleDeathCheckbox.addEventListener("change", () => {
         allowDeath = toggleDeathCheckbox.checked;
         console.log(`allowDeath změněno na: ${allowDeath}`);
